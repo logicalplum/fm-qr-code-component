@@ -10,25 +10,27 @@
 
 :root {
     --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 10%);
-    --dimmed: hsl(0, 0%, 30%);
+    --black: hsl(0, 0%, 20%);
     --slate-300: hsl(212, 45%, 89%);
     --slate-500: hsl(216, 15%, 48%);
     --slate-900: hsl(218, 44%, 22%);
-    --link: hsl(228, 45%, 44%);
+    --dimmed: hsl(216, 15%, 38%);
+    --link: hsl(218, 45%, 38%);
 }
 
 html {
-  font-family: Outfit, sans-serif;
-  font-size: 16px;
-  color: var(--black);
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    margin: 0;
     box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--black);
+    background: var(--slate-300);
 }
 main {
     display: flex;
@@ -36,26 +38,24 @@ main {
     align-items: center;
     flex: auto;
     width: 100vw;
-    height: calc(100vh - 32px);
-    background: var(--slate-300);
+    height: 100%;
 }
 footer {
     flex: none;
     width: 100vw;
-    height: 32px;
-    padding: 4px 0;
+    height: max-content;
 }
 
 p {
-  padding: 0 12px;
-  text-align: center;
-  color: var(--slate-500);
+    padding: 0 12px;
+    text-align: center;
+    color: var(--slate-500);
 }
 
 p.lead {
-  font-weight: 600;
-  font-size: 1.5em;
-  color: var(--black);
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--black);
 }
 
 .card {
@@ -74,8 +74,9 @@ p.lead {
 }
 
 .attribution {
+    padding-bottom: 4px;
     font-size: 0.6875rem;
-    color: var(--slate-500);
+    color: var(--dimmed);
     text-align: center;
 }
 .attribution a {
