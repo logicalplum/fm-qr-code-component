@@ -10,19 +10,25 @@
 
 :root {
     --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 10%);
+    --dimmed: hsl(0, 0%, 30%);
     --slate-300: hsl(212, 45%, 89%);
     --slate-500: hsl(216, 15%, 48%);
-    -slate-900: hsl(218, 44%, 22%);
+    --slate-900: hsl(218, 44%, 22%);
+    --link: hsl(228, 45%, 44%);
 }
 
 html {
   font-family: Outfit, sans-serif;
   font-size: 16px;
+  color: var(--black);
 }
 
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    box-sizing: border-box;
 }
 main {
     display: flex;
@@ -37,17 +43,19 @@ footer {
     flex: none;
     width: 100vw;
     height: 32px;
-    padding: 8px 
+    padding: 4px 0;
 }
 
 p {
-  padding: 0 8px;
+  padding: 0 12px;
   text-align: center;
+  color: var(--slate-500);
 }
 
 p.lead {
   font-weight: 600;
   font-size: 1.5em;
+  color: var(--black);
 }
 
 .card {
@@ -62,13 +70,14 @@ p.lead {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 12px;
 }
 
 .attribution {
     font-size: 0.6875rem;
+    color: var(--slate-500);
     text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--link);
 }
