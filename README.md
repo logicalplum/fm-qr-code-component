@@ -23,8 +23,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Links
 
 - Solution URL: [github.com/logicalplum/fm-qr-code-component](https://github.com/logicalplum/fm-qr-code-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
+- Live Site URL: [logicalplum.github.io/fm-qr-code-component](https://logicalplum.github.io/fm-qr-code-component/)
+g
 ## My process
 
 - Use vanilla HTML and CSS
