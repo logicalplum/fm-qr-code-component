@@ -25,6 +25,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - Solution URL: [github.com/logicalplum/fm-qr-code-component](https://github.com/logicalplum/fm-qr-code-component)
 - Live Site URL: [logicalplum.github.io/fm-qr-code-component](https://logicalplum.github.io/fm-qr-code-component/)
 g
+
 ## My process
 
 - Use vanilla HTML and CSS
@@ -51,7 +52,7 @@ Consider normalizing differs between browser default styles with [normalize.css]
 
 ### Useful resources
 
-- [Self-hosting web fonts | Google Fonts](<https://fonts.google.com> /knowledge/using_type/self_hosting_web_fonts)
+- [Self-hosting web fonts | Google Fonts](https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts)
 - [woff2 | GitHub](https://github.com/google/woff2)
 - [woff2 | Homebrew Formulae](https://formulae.brew.sh/formula/woff2#default)
 - [Colour Contrast Analyzer (CCA) | Vispero](https://vispero.com/lp/color-contrast-checker/)
