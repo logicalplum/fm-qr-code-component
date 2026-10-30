@@ -24,7 +24,6 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 - Solution URL: [github.com/logicalplum/fm-qr-code-component](https://github.com/logicalplum/fm-qr-code-component)
 - Live Site URL: [logicalplum.github.io/fm-qr-code-component](https://logicalplum.github.io/fm-qr-code-component/)
-g
 
 ## My process
 
@@ -46,9 +45,22 @@ g
 
 This challenge is my "Hello World" challenge on Frontend Mentor. Aside from the primary goal of learning how to build and submit a challenge, I was reminded of a few things I'd taken for granted working with CSS frameworks that normalize browser style differences.
 
+- Browsers add a 8px margin to the `<body>` element to prevent unstyled HTML from pressing against the edges. I set `body { margin: 0; }` in CSS to allow body background to go to the edges.
+- Default CSS box model (content-box) adds padding and border to box width and height, and that makes sizing _very_ tricky. Need to use `box-sizing: border-box;` in CSS to set box sizing independent of borders and padding. In had forgotten that `box-sizing` is not inherited, so setting that on the `body` element was not sufficient. It must be set on every sized element. I checked a popular normalizer, [modern-normalize](https://github.com/sindresorhus/modern-normalize), to find it set with a wild card.
+
+Feedback from my initial submission identified more problems and opportunities for improvement:
+
+- `index.html`: The page needs a level-1 heading. The "Improve your frontend skills..." line can do that; wrap in an `<h1>`.
+- `style.css`: A `url()` reference should be relative to the css file rather than the root folder.
+- `style.css`: Should set `width: 100%;` rather than `width: 100vw;` to get full width except for a scrollbar.
+- `style.css`: Browser defaults for `<h1>` now needed to be taken into account.
+- `README.md`: Fix a malformed URL that I had overlooked. (Didn't test.)
+
+After the initial submission, I addressed the problems then accessed the Figma file to find typography and spacing details. As a _very_ occasional Figma user, it took a while to get reacquainted but found what I needed.
+
 ### Continued development
 
-Consider normalizing differs between browser default styles with [normalize.css](https://github.com/necolas/normalize.css/) or [modern-normalize](https://github.com/sindresorhus/modern-normalize) or something else.
+Current solution has only been tested in Chrome in macOS. Further testing in a variety of browsers and devices, including mobile devices, should be done to be confident of a robust solution.
 
 ### Useful resources
 
