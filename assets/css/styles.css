@@ -10,13 +10,24 @@
 
 :root {
     --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 20%);
+    --black: hsl(218, 15%, 12%);
+    --dimmed: hsl(218, 15%, 36%);
+    --link: hsl(218, 45%, 36%);
     --slate-300: hsl(212, 45%, 89%);
     --slate-500: hsl(216, 15%, 48%);
     --slate-900: hsl(218, 44%, 22%);
-    --dimmed: hsl(216, 15%, 38%);
-    --link: hsl(218, 45%, 38%);
+    --font-preset-1: normal 15px/1.4 Outfit, sans-serif;
+    --font-preset-2: bold 22px/1.2 Outfit, sans-serif;
+    --font-preset-3: normal 12px/1 Outfit, sans-serif;
+    --letter-spacing-1: normal;
+    --letter-spacing-2: 0.2px;
+    --spacing-100: 10px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-500: 40px;
 }
+
+/* Reset relevant browser default styles */
 
 *,
 ::before,
@@ -24,19 +35,39 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+p,
+h1 {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Design styles */
+
 html {
-    font-family: Outfit, sans-serif;
-    font-size: 16px;
+    color: var(--black, initial);
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
-    color: var(--black);
     background: var(--slate-300);
 }
+
 main {
     display: flex;
     justify-content: center;
@@ -47,41 +78,46 @@ main {
 }
 
 .card {
-  position: relative;
-  max-width: 320px;
-  padding: 16px;
-  border-radius: 16px;
-  background: var(--white);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300, 1.5rem);
+    max-width: 320px;
+    padding: var(--spacing-200, 1rem);
+    padding-bottom: var(--spacing-500, 2.5rem);
+    border-radius: var(--spacing-200, 1rem);
+    background: var(--white);
 }
 .card__image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card__body {
+    padding: 0 var(--spacing-200, 1rem);
+    text-align: center;
+}
+
+.card__body h1 {
+    font: var(--font-preset-2, initial);
 }
 
 .card__body p {
-    padding: 0 12px;
-    text-align: center;
+    margin-top: var(--spacing-200, 1rem);
+    font: var(--font-preset-1, initial);
     color: var(--slate-500);
-  }
-  
-  .card__body h1 {
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--black);
 }
 
 footer {
     flex: none;
     width: 100%;
     height: max-content;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
 }
 
 .attribution {
-    font-size: 0.6875rem;
+    font: var(--font-preset-3, initial);
     color: var(--dimmed);
     text-align: center;
 }
